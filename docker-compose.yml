@@ -1,0 +1,26 @@
+services:
+  chatbot-backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploaded_files:/app/uploaded_files
+    environment:
+      - APP_HOST=0.0.0.0
+      - APP_PORT=8000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command: ["python", "backend.py"]
+    restart: unless-stopped
+
+  chatbot-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - chatbot-backend
+    environment:
+      - BACKEND_URL=http://chatbot-backend:8000
+    command: ["streamlit", "run", "frontend.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
+    restart: unless-stopped
