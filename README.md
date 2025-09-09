@@ -13,9 +13,17 @@ File Management: View and clear uploaded files easily
 ## Python setup
 
 ### 1. Clone the repository
+```bash
 git clone https://github.com/ShoumanOmar/Applab-chatbot-assignment
 
 ### 2. Install dependencies (better to create a virtual environment first either using venv or conda)
+# Using venv
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Using conda
+conda create -n chatbot-env python=3.9
+conda activate chatbot-en
 pip install -r requirements.txt
 
 
