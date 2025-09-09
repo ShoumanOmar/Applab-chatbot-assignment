@@ -7,7 +7,10 @@ from openai import OpenAI
 import uvicorn
 import pypdf
 import time
+from dotenv import load_dotenv
 
+
+load_dotenv()  # This loads the environment variables from .env file
 
 # Configuration for file uploads
 UPLOAD_DIR = "./uploaded_files"
