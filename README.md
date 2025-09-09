@@ -2,8 +2,11 @@ A chatbot application that allows users to upload PDF documents and ask question
 
 # Features
 Document Upload: Upload multiple PDF documents for analysis
+
 Chat Interface: Natural conversation with OpenAI assistant
+
 Context Awareness: The chatbot understands content from uploaded documents
+
 File Management: View and clear uploaded files easily
 
 # Setup instruction 
