@@ -1,4 +1,4 @@
-A chatbot application that allows users to upload PDF documents and ask questions about their content. Built with FastAPI backend and Streamlit frontend, powered by OpenAI's GPT-4.1.
+A chatbot application that allows users to upload PDF documents and ask questions about their content. Built with FastAPI backend and Streamlit frontend, powered by OpenAI's GPT-4.1-mini.
 
 # Features
 Document Upload: Upload multiple PDF documents for analysis
